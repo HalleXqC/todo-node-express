@@ -5,10 +5,9 @@ const { body } = require('express-validator')
 
 /**
  * @swagger
- * /users:
- *   get:
- *     summary: Get all users
- *     description: Retrieve a list of all users
+ * /user/register:
+ *   post:
+ *     summary: Register a new user
  *     responses:
  *       200:
  *         description: A list of users
