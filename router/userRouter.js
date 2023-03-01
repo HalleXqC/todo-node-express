@@ -4,19 +4,15 @@ const userController = require('../controllers/userController')
 const { body } = require('express-validator')
 
 /**
- * @swagger
+ * @openapi
  * /user/register:
  *   post:
- *     summary: Register a new user
+ *    tag:
+ *     -Register
+ *     description: Register a new user
  *     responses:
  *       200:
  *         description: A list of users
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/models/models.js/User'
  */
 
 router.post(
