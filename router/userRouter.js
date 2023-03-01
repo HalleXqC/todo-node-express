@@ -3,7 +3,23 @@ const router = new Router()
 const userController = require('../controllers/userController')
 const { body } = require('express-validator')
 
-// TODO Validate all controllers functions
+/**
+ * @swagger
+ * /users:
+ *   get:
+ *     summary: Get all users
+ *     description: Retrieve a list of all users
+ *     responses:
+ *       200:
+ *         description: A list of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/models/models.js/User'
+ */
+
 router.post(
     '/register',
     body('email')
